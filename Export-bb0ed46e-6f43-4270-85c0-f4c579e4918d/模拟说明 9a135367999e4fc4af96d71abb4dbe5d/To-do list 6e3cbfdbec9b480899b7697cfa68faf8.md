@@ -1,0 +1,104 @@
+# To-do list
+
+先把文主体写出来，再斟酌词句。
+
+# 观点
+
+- [ ]  加入quantum的成分。
+- [ ]  找得到一个torsional mode的实验验证吗？
+- [ ]  我不要继续强调“SAW”吧。
+- [ ]  transmitter
+- [ ]  our method? FEM method?
+- [ ]  weak form**s**
+- [ ]  metalised就是不考虑外界环境的例子。
+- [ ]  应该默认考虑外界环境。3
+
+# 结构
+
+- [ ]  “归一化“的场，和各自的最大值。
+- [ ]  定义变量表格太长了？
+- [ ]  提起device
+- [ ]  对比不用我这种方法的结果？
+
+# 检查
+
+- [ ]  时态和三单
+
+# 需要确认的说法
+
+连续性边界条件 continuity boundary condition
+
+# 备份
+
+- 表格1
+    
+    ```latex
+    \begin{table*}[!t]
+    \caption{Variables in a mechanical field}
+    \label{tab:mechanical variables}
+    \centering
+    \begin{tabular}{ccc}
+    \hline
+    name& expression& description\\
+    \hline
+    {\tt{rho}}& {\tt{root.material.rho}}& density\\
+    {\tt{omega}}& {\tt{2*pi*lambda [rad/s]}}&angular frequnecy\\
+    {\tt{S1}}& {\tt{comp1.ux}}& strain\\
+    {\tt{S2}}& {\tt{comp1.vy}}& strain\\
+    {\tt{S3}}& {\tt{comp1.wz}}& strain\\
+    {\tt{S4}}& {\tt{comp1.wz}}& strain\\
+    {\tt{S5}}& {\tt{comp1.uz+comp1.wx}}& strain\\
+    {\tt{S6}}& {\tt{comp1.uy+comp1.vx}}& strain\\
+    {\tt{T1}}& {\tt{cE11*S1+cE12*S2+cE13*S3+cE14*S4+cE15*S5+cE16*S6}}& stress\\
+    {\tt{T2}}& {\tt{cE21*S1+cE22*S2+cE23*S3+cE24*S4+cE25*S5+cE26*S6}}& stress\\
+    {\tt{T3}}& {\tt{cE31*S1+cE32*S2+cE33*S3+cE34*S4+cE35*S5+cE36*S6}}& stress\\
+    {\tt{T4}}& {\tt{cE41*S1+cE42*S2+cE43*S3+cE44*S4+cE45*S5+cE46*S6}}& stress\\
+    {\tt{T5}}& {\tt{cE51*S1+cE52*S2+cE53*S3+cE54*S4+cE55*S5+cE56*S6}}& stress\\
+    {\tt{T6}}& {\tt{cE61*S1+cE62*S2+cE63*S3+cE64*S4+cE65*S5+cE66*S6}}& stress\\
+    {\tt{eSx}}& {\tt{eES11*S1+eES12*S2+eES13*S3+eES14*S4+eES15*S5+eES16*S6}}&\underline{\underline{\underline{e}}}:\underline{\underline{S}}\\
+    {\tt{eSy}}& {\tt{eES21*S1+eES22*S2+eES23*S3+eES24*S4+eES25*S5+eES26*S6}}&\underline{\underline{\underline{e}}}:\underline{\underline{S}}\\
+    {\tt{eSz}}& {\tt{eES31*S1+eES32*S2+eES33*S3+eES34*S4+eES35*S5+eES36*S6}}&\underline{\underline{\underline{e}}}:\underline{\underline{S}}\\
+    \hline
+    \end{tabular}
+    \end{table*}
+    ```
+    
+- 表格2
+    
+    ```latex
+    \begin{table*}[!t]
+    \caption{Variables in an electromagnetic field}
+    \label{tab:electromagnetic variables}
+    \centering
+    \begin{tabular}{ccc}
+    \hline
+    name& expression& description\\
+    \hline
+    {\tt{Ex}}& {\tt{comp1.Mx*omega}}& electric field strength\\
+    {\tt{Ey}}& {\tt{comp1.My*omega}}& electric field strength\\
+    {\tt{Ey}}& {\tt{comp1.My*omega}}& electric field strength\\
+    {\tt{curlMx}}& {\tt{comp1.Mzy-comp1.Myz}}& curl of M-field\\
+    {\tt{curlMy}}& {\tt{comp1.Mxz-comp1.Mzx}}& curl of M-field\\
+    {\tt{curlMz}}& {\tt{comp1.Myx-comp1.Mxy}}& curl of M-field\\
+    {\tt{Hx}}& {\tt{curlMx/(-i*mu0\_const)}}& magnetic field strength\\
+    {\tt{Hy}}& {\tt{curlMy/(-i*mu0\_const)}}& magnetic field strength\\
+    {\tt{Hz}}& {\tt{curlMz/(-i*mu0\_const)}}& magnetic field strength\\
+    {\tt{Bx}}& {\tt{Hx*mu0\_const}}& magnetic flux density\\
+    {\tt{By}}& {\tt{Hy*mu0\_const}}& magnetic flux density\\
+    {\tt{Bz}}& {\tt{Hz*mu0\_const}}& magnetic flux density\\
+    {\tt{eE1}}& {\tt{eES11*Ex+eES21*Ey+eES31*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{eE2}}& {\tt{eES12*Ex+eES22*Ey+eES32*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{eE3}}& {\tt{eES13*Ex+eES23*Ey+eES33*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{eE4}}& {\tt{eES14*Ex+eES24*Ey+eES34*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{eE5}}& {\tt{eES15*Ex+eES25*Ey+eES35*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{eE6}}& {\tt{eES16*Ex+eES26*Ey+eES36*Ez}}& $\underline{\underline{\underline{e}}}^T\cdot\underline{E}$\\
+    {\tt{Dx}}& {\tt{epsilon\_xx*Ex+epsilon\_xy*Ey+epsilon\_xz*Ez+eSx}}& electric displacement field\\
+    {\tt{Dy}}& {\tt{epsilon\_yx*Ex+epsilon\_yy*Ey+epsilon\_yz*Ez+eSy}}& electric displacement field\\
+    {\tt{Dz}}& {\tt{epsilon\_zx*Ex+epsilon\_zy*Ey+epsilon\_zz*Ez+eSz}}& electric displacement field\\
+    {\tt{tMx}}& \makecell[c]{{\tt{comp1.Mx-(comp1.w2.nx*comp1.Mx+comp1.w2.ny*comp1.My}}\\{\tt{+comp1.w2.nz*comp1.Mz)*comp1.w2.nx}}}& tangential part of M-field\\
+    {\tt{tMy}}& \makecell[c]{{\tt{comp1.My-(comp1.w2.nx*comp1.Mx+comp1.w2.ny*comp1.My}}\\{\tt{+comp1.w2.nz*comp1.Mz)*comp1.w2.ny}}}& tangential part of M-field\\
+    {\tt{tMz}}& \makecell[c]{{\tt{comp1.Mz-(comp1.w2.nx*comp1.Mx+comp1.w2.ny*comp1.My}}\\{\tt{+comp1.w2.nz*comp1.Mz)*comp1.w2.nz}}}& tangential part of M-field\\
+    \hline
+    \end{tabular}
+    \end{table*}
+    ```
