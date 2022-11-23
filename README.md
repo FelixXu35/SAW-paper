@@ -1,8 +1,8 @@
 中文版教程请点击以下链接🔗：
 
-https://www.notion.so/felixxu35/9a135367999e4fc4af96d71abb4dbe5d
+https://www.notion.so/xiaotianxu/86ff1b4e7153402a98b3e525ab1b28c6
 
 English version can be found in the following link:
 
-https://www.notion.so/felixxu35/Simulation-Instruction-0569ad83328547a4955f15213489ae63
+https://www.notion.so/xiaotianxu/Simulation-Instruction-58353f73e47e4aa5b184d3bc13bbe8f4
 
