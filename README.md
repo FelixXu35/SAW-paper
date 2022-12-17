@@ -1,3 +1,5 @@
+This is the detailed supplementary information for the paper 
+
 # Notion links
 
 中文版教程请点击以下链接🔗：
@@ -12,8 +14,4 @@ https://www.notion.so/xiaotianxu/Simulation-Instruction-58353f73e47e4aa5b184d3bc
 
 # Local 
 
-[1]: /Users/felixxu/Library/CloudStorage/OneDrive-ImperialCollegeLondon/文件/Code/SAW-paper/Chineseversion.md	"中文版"
-
-
-
-[](/Users/felixxu/Library/CloudStorage/OneDrive-ImperialCollegeLondon/文件/Code/SAW-paper/Chinese version.md)
+Chinese Version: [CN](/Users/felixxu/Library/CloudStorage/OneDrive-ImperialCollegeLondon/文件/Code/SAW-paper/Chinese version.md)
