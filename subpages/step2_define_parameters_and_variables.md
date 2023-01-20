@@ -1,5 +1,7 @@
 # Step 2: Define Parameters and Variables
 
+[← back](../README.md)
+
 In COMSOL, parameters are constants, which don't change with results or other variables. Their values are directly assigned by the user. For example, the diameters of a piezoelectric device are parameters. In contrast, variables are defined as a function, which may be different with time, position and/or results.
 
 All definitions are accomplished within ***Global Definitions*** node.
@@ -13,7 +15,7 @@ There are two methods of including definitions:
 1. Manually copt and paste
 2. Automatically import
 
-### Copy and paste manually
+## Copy and paste manually
 
 Please build a new node for each list of definition, then copy and paste all terms and their expressions. Note that some nodes are ***Parameter***s and some nodes are ***Variable***s.
 
@@ -27,7 +29,7 @@ Please build a new node for each list of definition, then copy and paste all ter
 
 [Global Variables - Absorbing Boundary Condition](../Global_Variables/absorbing_boundary_condition.md)
 
-### Import Automatically
+## Import Automatically
 
 When define a new ***Parameters*** or ***Variables*** node, the corresponding list of terms can be imported using the following files.
 

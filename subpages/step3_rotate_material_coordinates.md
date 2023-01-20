@@ -1,8 +1,10 @@
 # Step 3: Rotate Material Coordinates
 
+[← back](../README.md)
+
 In the simulations, the direction of the material coordinates decides the results. Usually, one-time rotation is adequate. This method includes several lists of Parameters and Variables, which can help users to rotate the material coordinates easily. Note that this rotation will be around one of the three spatial coordinates.
 
-### Definitions
+## Definitions
 
 Note that the list ***Reduced Coefficients*** doesn’t do any rotation. It just reduces the prefix `root.material.StressCharge.`, so that the other lists will not be too cumbersome.
 
@@ -24,7 +26,7 @@ Their corresponding “.txt” files are here:
 
 [Rotate around z-axis.txt](../global_variables/rotate_around_z.md)
 
-### How to use them
+## How to use them
 
 The list ***Reduced Coefficients*** is always necessary. Please do not ***disable*** it after importing it.
 
@@ -46,6 +48,6 @@ Any rotation needs an axis. In this model, the axis can only be the x, y or z ax
 
 Note that enabling more than one lists is forbidden in this mode. Remember to ***disable*** the other two.
 
-### Example
+## Example
 
 When simulating the phase velocity of different propagating direction in Lithium Niobate. Select ***128°Y-cut***, then enable ***Rotate around z-axis*** and input an angle in the expression of `q` in Global Parameters.
