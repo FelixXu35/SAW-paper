@@ -17,5 +17,3 @@ Please also define a node by right-clicking ***Definitions*** and select ***Nonl
 | mHx  | max(comp1.maxop1(real(H1x)),comp1.maxop2(real(H2x)))         |
 | mHy  | max(comp1.maxop1(real(H1y)),comp1.maxop2(real(H2y)))         |
 | mHz  | max(comp1.maxop1(real(H1z)),comp1.maxop2(real(H2z)))         |
-
-# 
