@@ -17,15 +17,15 @@ There are two methods of including definitions:
 
 Please build a new node for each list of definition, then copy and paste all terms and their expressions. Note that some nodes are ***Parameter***s and some nodes are ***Variable***s.
 
-[Global Parameters](./Global_Variables/parameters.md)
+[Global Parameters](../Global_Variables/parameters.md)
 
-[Global Variables - Maximum](./Global_Variables/maximum.md)
+[Global Variables - Maximum](../Global_Variables/maximum.md)
 
-[Global Variables - Acoustic Field](./Global_Variables/acoustic_field.md)
+[Global Variables - Acoustic Field](../Global_Variables/acoustic_field.md)
 
-[Global Variables - Internal & External Electromagnetic Fields](./Global_Variables/EM_field.md)
+[Global Variables - Internal & External Electromagnetic Fields](../Global_Variables/EM_field.md)
 
-[Global Variables - Absorbing Boundary Condition](./Global_Variables/absorbing_boundary_condition.md)
+[Global Variables - Absorbing Boundary Condition](../Global_Variables/absorbing_boundary_condition.md)
 
 # Import Automatically
 
@@ -33,14 +33,14 @@ When define a new ***Parameters*** or ***Variables*** node, the corresponding li
 
 How: Right-click the ***Global Definitions*** node and define a ***Parameters/Variables*** node. Select ***Label:*** in the setting area then input the name of the list. There is a “Load from File” icon below the empty list. Left-click this icon and choose the corresponding “.txt” file.
 
-[Parameters.txt](./Global_Variables/parameters.txt)
+[Parameters.txt](../Global_Variables/parameters.txt)
 
-[Maximum.txt](./Global_Variables/maximum.txt)
+[Maximum.txt](../Global_Variables/maximum.txt)
 
-[Acoustic Field.txt](./Global_Variables/acoustic_field.txt)
+[Acoustic Field.txt](../Global_Variables/acoustic_field.txt)
 
-[Internal EM field.txt](./Global_Variables/internal_EM_field.txt)
+[Internal EM field.txt](../Global_Variables/internal_EM_field.txt)
 
-[External EM Field.txt](./Global_Variables/external_EM_field.txt)
+[External EM Field.txt](../Global_Variables/external_EM_field.txt)
 
-[Absorbing Boundary Condition.txt](./Global_Variables/absorbing_boundary_condition.txt)
+[Absorbing Boundary Condition.txt](../Global_Variables/absorbing_boundary_condition.txt)
