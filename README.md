@@ -26,7 +26,7 @@ https://www.notion.so/xiaotianxu/Simulation-Instruction-58353f73e47e4aa5b184d3bc
 
 # Start from an empty model
 
-[Step 1: Build a new mode]()
+[Step 1: Build a new mode](./subpages/step1_build_a_new_mode.md)
 
 [Step 2: Define Parameters and Variables](./subpages/step2_define_parameters_and_variables.md)
 

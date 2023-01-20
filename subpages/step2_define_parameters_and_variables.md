@@ -13,7 +13,7 @@ There are two methods of including definitions:
 1. Manually copt and paste
 2. Automatically import
 
-# ***\*Copy and paste manually\****
+### Copy and paste manually
 
 Please build a new node for each list of definition, then copy and paste all terms and their expressions. Note that some nodes are ***Parameter***s and some nodes are ***Variable***s.
 
@@ -27,20 +27,20 @@ Please build a new node for each list of definition, then copy and paste all ter
 
 [Global Variables - Absorbing Boundary Condition](../Global_Variables/absorbing_boundary_condition.md)
 
-# Import Automatically
+### Import Automatically
 
 When define a new ***Parameters*** or ***Variables*** node, the corresponding list of terms can be imported using the following files.
 
 How: Right-click the ***Global Definitions*** node and define a ***Parameters/Variables*** node. Select ***Label:*** in the setting area then input the name of the list. There is a “Load from File” icon below the empty list. Left-click this icon and choose the corresponding “.txt” file.
 
-[Parameters.txt](../Global_Variables/parameters.txt)
+[Parameters.txt](../global_variables/Parameters.txt)
 
-[Maximum.txt](../Global_Variables/maximum.txt)
+[Maximum.txt](../global_variables/Maximum.txt)
 
-[Acoustic Field.txt](../Global_Variables/acoustic_field.txt)
+[Acoustic Field.txt](../global_variables/Acoustic Field.txt)
 
-[Internal EM field.txt](../Global_Variables/internal_EM_field.txt)
+[Internal EM field.txt](../global_variables/Internal EM field.txt)
 
-[External EM Field.txt](../Global_Variables/external_EM_field.txt)
+[External EM Field.txt](../global_variables/External EM Field.txt)
 
-[Absorbing Boundary Condition.txt](../Global_Variables/absorbing_boundary_condition.txt)
+[Absorbing Boundary Condition.txt](../global_variables/Absorbing Boundary Condition.txt)
