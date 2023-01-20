@@ -1,6 +1,6 @@
 # Step 2: Define Parameters and Variables
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 In COMSOL, parameters are constants, which don't change with results or other variables. Their values are directly assigned by the user. For example, the diameters of a piezoelectric device are parameters. In contrast, variables are defined as a function, which may be different with time, position and/or results.
 

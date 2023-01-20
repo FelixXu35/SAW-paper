@@ -1,6 +1,6 @@
 # Why not using the AC/DC module?
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 ## Question
 
@@ -36,9 +36,9 @@ Potentially, there are four drawbacks of this AC/DC method:
 
    ![image-20230120162103594](./assets/image-20230120162103594.png)
 
-   * The simulation results given by the built-in AC/DC method:
+   * The simulation results given by the built-in AC/DC *method*:
 
-   ![image-20230120162116423](./assets/image-20230120162116423.png)
+   ![image-20230120164843556](./assets/image-20230120164843556.png)
 
    Comparing the results one can find that there is a lack of electric field corresponding to the velocity of 4118.3329 m/s in the AC/DC method. That means the AC/DC method fails to completely simulate the required fields in the piezoelectric material. Besides, one may also find that the velocities given by the AC/DC method are less accurate than the ones given by our method.
 

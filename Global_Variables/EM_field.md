@@ -1,5 +1,7 @@
 # Global Variables - Internal & External Electromagnetic Fields
 
+[⇦ back](../subpages/step2_define_parameters_and_variables.md)
+
 There is no electromagnetic-acoustic coupling existing in the external EM field, which leads to a lack of `eSx`, `eSy` and `eSz` in the definition of external D field.
 
 ### Internal EM field:

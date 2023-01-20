@@ -1,6 +1,6 @@
 # Step 4: Build the Geometry
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 Directly importing from CAD model is supported (although we didn’t use it).
 

@@ -1,6 +1,6 @@
 # Step 7: Search for Eigenvalues
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 ## Study settings
 

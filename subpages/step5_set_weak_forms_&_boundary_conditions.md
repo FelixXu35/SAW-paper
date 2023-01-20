@@ -1,6 +1,6 @@
 # Step 5: Set Weak Forms & Boundary Conditions
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 The weak forms and boundary conditions are the backbone of a COMSOL model.  Therefore, it is crucial to define them correctly. This definition is in ***Weak Form PDE*** interface.
 

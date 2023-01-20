@@ -1,6 +1,6 @@
 # Step 6: Mesh
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 ## Tricks
 

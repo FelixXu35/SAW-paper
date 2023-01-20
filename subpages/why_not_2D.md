@@ -1,6 +1,6 @@
 # Can we use a 2D simulation?
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 ## Question
 

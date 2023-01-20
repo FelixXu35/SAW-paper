@@ -1,6 +1,6 @@
 # Step 8: Results
 
-[← back](../README.md)
+[⇦ back](../README.md)
 
 ## Visualisation
 

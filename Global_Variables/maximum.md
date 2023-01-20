@@ -1,5 +1,7 @@
 # Global Variables - Maximum
 
+[⇦ back](../subpages/step2_define_parameters_and_variables.md)
+
 This group of variables will be used in the normalization.
 
 Please also define a node by right-clicking ***Definitions*** and select ***Nonlocal Couplings*** → ***Maximum*** under ***Component 1***.

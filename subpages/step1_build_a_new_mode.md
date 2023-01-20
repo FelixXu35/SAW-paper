@@ -1,6 +1,6 @@
 # Step 1: Build a new mode
 
-[← back](../README.md)
+[[⇦ back](../README.md)](../README.md)
 
 The number of dimensions and the category of simulation will be decided in this step. Huge problem will occur if they cannot be correctly selected. Fortunately,  in our simulation, this selection is not complicated.
 

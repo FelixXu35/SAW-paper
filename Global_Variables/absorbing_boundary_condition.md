@@ -1,5 +1,7 @@
 # Global Variables - Absorbing Boundary Condition
 
+[⇦ back](../subpages/step2_define_parameters_and_variables.md)
+
 | Name    | Expression                                                   |
 | ------- | ------------------------------------------------------------ |
 | rx      | x / sqrt(x^2+y^2+z^2)                                        |
