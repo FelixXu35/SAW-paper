@@ -18,13 +18,13 @@ Note that the list ***Reduced Coefficients*** doesn’t do any rotation. It just
 
 Their corresponding “.txt” files are here:
 
-[Reduced Coefficients.txt](../global_variables/Reduced Coefficients.txt)
+[Reduced Coefficients.txt](../global_variables/Reduced_Coefficients.txt)
 
-[Rotate around x-axis.txt](../global_variables/Rotate around x-axis.txt)
+[Rotate around x-axis.txt](../global_variables/Rotate_around_x-axis.txt)
 
-[Rotate around y-axis.txt](../global_variables/Rotate around y-axis.txt)
+[Rotate around y-axis.txt](../global_variables/Rotate_around_y-axis.txt)
 
-[Rotate around z-axis.txt](../global_variables/rotate_around_z.md)
+[Rotate around z-axis.txt](../global_variables/Rotate_around_z-axis.md)
 
 ## How to use them
 

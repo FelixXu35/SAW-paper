@@ -39,10 +39,10 @@ How: Right-click the ***Global Definitions*** node and define a ***Parameters/Va
 
 [Maximum.txt](../global_variables/Maximum.txt)
 
-[Acoustic Field.txt](../global_variables/Acoustic Field.txt)
+[Acoustic Field.txt](../global_variables/Acoustic_Field.txt)
 
-[Internal EM field.txt](../global_variables/Internal EM field.txt)
+[Internal EM field.txt](../global_variables/Internal_EM_field.txt)
 
-[External EM Field.txt](../global_variables/External EM Field.txt)
+[External EM Field.txt](../global_variables/External_EM_Field.txt)
 
-[Absorbing Boundary Condition.txt](../global_variables/Absorbing Boundary Condition.txt)
+[Absorbing Boundary Condition.txt](../global_variables/Absorbing_Boundary_Condition.txt)

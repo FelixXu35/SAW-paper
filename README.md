@@ -14,9 +14,9 @@ https://aip.scitation.org/doi/abs/10.1063/5.0120630
 
 https://www.notion.so/xiaotianxu/86ff1b4e7153402a98b3e525ab1b28c6
 
-## Basic Information
+## Basics
 
-[Terminologies](https://www.notion.so/Terminologies-b30bb2eb6d1f4131a64b2b8b8238a162)
+[Terminologies](./subpages/terms.md)
 
 ## Start from an empty model
 
