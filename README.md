@@ -26,8 +26,6 @@ https://www.notion.so/xiaotianxu/86ff1b4e7153402a98b3e525ab1b28c6
 
 [Step 3: Rotate Material Coordinates](./subpages/step3_rotate_material_coordinates.md)
 
-[Step 4: Building Geometry](./subpages/step4_build_the_geometry.md)
-
 ## Templates
 
 *Requires COMSOL 6.0 or later.*
@@ -35,6 +33,8 @@ https://www.notion.so/xiaotianxu/86ff1b4e7153402a98b3e525ab1b28c6
 [empty_60.mph](./mph_files/empty_60.mph)
 
 ## Start form a template
+
+[Step 4: Building Geometry](./subpages/step4_build_the_geometry.md)
 
 [Step 5: Set Weak Forms & Boundary Conditions](./subpages/step5_set_weak_forms_&_boundary_conditions.md)
 

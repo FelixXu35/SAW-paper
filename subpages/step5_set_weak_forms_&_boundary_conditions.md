@@ -2,17 +2,13 @@
 
 [⇦ back](../README.md)
 
-The weak forms and boundary conditions are the backbone of a COMSOL model.  Therefore, it is crucial to define them correctly. This definition is in ***Weak Form PDE*** interface.
-
-A suitable boundary condition can help to find eigenmodes more quickly and more accurately, since It can filter trivial results.
-
-选取一个好的边界条件，不仅可以帮助我们更准确得找到想要的振动模式，更有利于筛掉不需要的振动模式。在选择的时候要考虑到所求振动模式的独特之处并利用好他们。
+Weak forms and boundary conditions are the soul of a COMSOL model. The weak forms tell FEM softwares the general rule of these physical fields, while a suitable boundary condition can help to find eigenmodes more quickly and more accurately, since It can filter trivial results. It is crucial to define them correctly. This definition is in each ***Weak Form PDE*** interface.
 
 ## Acoustic Field
 
-### Weak Form: Mechanic Term
+### Weak Forms: Mechanic Term
 
-These two lines correspond to elastic energy and kinetic energy.
+The following two expressions correspond to elastic energy and kinetic energy, respectively. They need to be input into the node ***Weak Form PDE*** of your acoustic field interface.
 
 ```
 %% 1st line:
@@ -22,9 +18,9 @@ These two lines correspond to elastic energy and kinetic energy.
 rho*(omega)^2*(test(u)*u+test(v)*v+test(w)*w)
 ```
 
-### Weak From: Coupling Term
+### Weak Forms: Coupling Term
 
-耦合项定义在一个单独的节点的意义在于，想要模拟纯声场的时候，只需要***禁用*** 耦合项和电磁场对应的***弱形式偏微分方程*** 接口即可。
+This term set the influence of electromagnetic fields on the acoustic fields. It need to be input into a separate ***Weak Contribution*** node, by which the model can be easily transformed into a purely acoustic simulation (simply ***Disable*** electromagnetic fields and this ***Weak Contribution*** node).
 
 ```
 %% The coupling term:
@@ -33,33 +29,27 @@ rho*(omega)^2*(test(u)*u+test(v)*v+test(w)*w)
 
 ### Boundary Condition: Free Boundary Condition
 
-适用于器件与空气/真空的交界面。
+The free boundary condition is applied to the interface between piezoelectric devices and the air/vacuum. This boundary condition is accomplished by the default ***Zero Flux*** node without any extra input.
 
-自由边界条件其实不需要额外输入，使用默认的***零通量*** 即可。
-
-使用别的边界条件的时候把自由的边界空出来，默认的***零通量*** 会自动应用在这个边界上，这个边界就会成为自由边界。
-
-Note that, for now, the free boundary condition can only be used on the acoustic field. I am not sure
-
-注意：目前自由边界条件只能应用在声场上，暂不清楚***零通量*** 在电磁场的弱形式中意味着什么。
+Note that, for now, the free boundary condition can only be used on the acoustic field. I am not sure what's the influence of a ***Zero Flux*** node on the electromagnetic fields.
 
 ### Boundary Condition: Fixed Boundary Condition
 
-固定约束适用于声波传播不到的边界，或者被牢固固定的边界。
+The Fixed Boundary Condition is applied on boundaries that waves cannot (or merely) reach, the fixed boundary condition is a simple choice. This boundary condition is realized using ***Dirichlet Boundary Condition*** node, where all three input boxes are filled with zeros. 
 
-固定约束可以通过***狄利克雷边界条件*** 实现。在***弱形式偏微分方程*** 节点上单击右键，可以找到并添加***狄利克雷边界条件*** 。***狄利克雷边界条件*** 限制的就是我们之前设置过的三个因变量，需要把三个对勾都勾上，然后在三个输入框中都输入`0`。
+Right click on the ***Weak Form PDE*** node and create a ***Dirichlet Boundary Condition*** node, then type three `0` in three input boxes.
 
 ### Boundary Condition: Periodic Boundary Condition
 
-周期性边界条件可以截断在某一方向上周期性传播的声波，或者在某一方向上完全相同的波。
+The Periodic Boundary Condition can truncate acoustic waves that are periodically propagating, or identical on one direction. 
 
-直接在***弱形式偏微分方程*** 接口上单击右键，选择***周期性条件*** 节点，然后选择对应的边界即可。建议每个***周期性条件*** 节点只选择一对对应的边界。
+Right click on the ***Weak Form PDE*** node, then create ***Period Boundary Condition***s and then select the correct boundaries in the ***Boundary Selection*** box. We suggest that only one pair of boundaries are selected in each ***Period Boundary Condition*** node.
 
 ## Electromagnetic Field
 
-### Weak Form: Electric Energy Term
+### Weak Forms: Electric Energy Term
 
-内外场在电场能量上确实有所不同，内电场能量包括耦合能量，但是外电场不包括。这个不同点不体现在弱形式上，而是体现在内外场对于电位移的不同定义上。
+The electric energy is different between internal field and external field, since there is coupling term in the internal field but not in the external field. This discrepancy shows on the definition of the electric displacement, instead of the weak forms.
 
 ##### Internal field:
 
@@ -73,7 +63,7 @@ Note that, for now, the free boundary condition can only be used on the acoustic
 -(D2x*test(E2x)+D2y*test(E2y)+D2z*test(E2z))
 ```
 
-### Weak Form: Magnetic Energy Term
+### Weak Forms: Magnetic Energy Term
 
 ##### Internal field:
 
@@ -89,17 +79,15 @@ Note that, for now, the free boundary condition can only be used on the acoustic
 
 ### Boundary Condition: Fixed Constraint
 
-电磁场的固定约束适用于电磁波（几乎）传播不到的边界。
-
-右键点击***弱形式偏微分方程*** 接口，选择创建***狄利克雷边界条件*** 节点。将三个“制定xxx值”勾选框全部勾选，并在三个输入框中都输入0。
+Similar to the fixed boundary condition in acoustic fields, this constraint is applied to boundaries that electromagnetic waves cannot (or merely) reach. The procedures of defining this constraint is also similar to the one of the fixed boundary condition.
 
 ### Boundary Condition: Electric-wall Boundary Condition
 
-这个边界条件可以很方便地模拟任何金属的表面，比如金属腔的内壁。
+The electric-wall boundary condition can easily simulate the surface of a metal wall, for example, the inner surface of a metal cavity.
 
-右键单击右键点击边界所在的***弱形式偏微分方程*** 接口，选择创建三个***逐点约束*** 节点，手动选择理想电导体所在的边界，然后在三个节点的***约束表达式*** 输入框中分别输入以下内容：
+Right click the ***Weak Form PDE*** node and created three ***Pointwise Constraint*** nodes. Then manually select the boundaries where the metal exist and input the following three ***Constraint expression*** in three nodes.
 
-如果约束位于内场的边界：
+##### If the constraint is on the internal surface:
 
 ```
 tM1x
@@ -107,7 +95,7 @@ tM1y
 tM1z
 ```
 
-如果约束位于外场的边界：
+##### If the constraint in on the external surface:
 
 ```
 tM2x
@@ -119,13 +107,14 @@ tM2z
 
 This Boundary Condition is used to connect the internal field and the external field. Its mathematical expression is:
 
-$$ \hat{n}\times(\underline{E}_2-\underline{E}_1) $$
+$$
+\hat{n}\times(\underline{E}_2-\underline{E}_1)
+$$
+where $\hat{n}$ is the norm on the interface between internal and external fields.
 
-其中 $\hat{n}$ 是内外电磁场交界面上的法向单位矢量。
+To use this boundary condition, right click the ***Weak Form PDE*** nodes of internal and external fields and created three ***Pointwise Constraint*** nodes. Then manually select the interface and input the following three ***Constraint expression*** in six nodes.
 
-使用这个边界条件时，需要在内外电场对应的***弱形式偏微分方程*** 接口上单击右键，分别新建三个***逐点约束*** 节点，手动选择内外电场的交界面，然后在共计六个节点的***约束表达式*** 输入框中分别输入以下内容：
-
-内场：
+##### Internal Field:
 
 ```
 M1x - M2x
@@ -133,7 +122,7 @@ M1y - M2y
 M1z - M2z
 ```
 
-外场：
+##### External Field:
 
 ```
 M1x - M2x
@@ -145,9 +134,7 @@ M1z - M2z
 
 This boundary condition is applied on the external surface of radiating devices, like antennas. The absorbing boundary condition can effectively truncate the calculation domain while maintain a high accuracy.
 
-这个边界条件适用于天线等向外辐射电磁场的模型的外表面，***吸收边界条件*** 在截断计算空间的同时可以有效地保证电磁波不会反射回来。
-
-这个边界条件必须位于***弱约束*** 中。由于***吸收边界条件*** 只会出现在外电磁场中，所以只需右键单击外电磁场的***弱形式偏微分方程*** 接口，创建三个***弱约束***  ，选择整个模型的最外表面，并在***约束表达式*** 输入框输入以下三个表达式：
+This boundary condition must be in a Weak Constraint. Right click the ***Weak Form PDE*** nodes of the external field and create three ***Weak Constraint*** nodes, then select the outer surface of the mode and input the following three ***Constraint expression***s in three nodes.
 
 ```
 rcurlMx - i*k*Mtx
