@@ -1,0 +1,18 @@
+H2x "curlM2x / (-i*mu0_const)" 磁场强度
+H2y "curlM2y / (-i*mu0_const)" 磁场强度
+H2z "curlM2z / (-i*mu0_const)" 磁场强度
+B2z H2z*mu0_const 磁感应强度
+B2x H2x*mu0_const 磁感应强度
+B2y H2y*mu0_const 磁感应强度
+D2x "epsilon_xx*E2x + epsilon_xy*E2y + epsilon_xz*E2z" 电位移矢量
+D2y "epsilon_yx*E2x + epsilon_yy*E2y + epsilon_yz*E2z" 电位移矢量
+D2z "epsilon_zx*E2x + epsilon_zy*E2y + epsilon_zz*E2z" 电位移矢量
+E2x "comp1.M2x * omega" 电场强度
+E2y "comp1.M2y * omega" 电场强度
+E2z "comp1.M2z * omega" 电场强度
+curlM2x "comp1.M2zy - comp1.M2yz" M场的旋度
+curlM2y "comp1.M2xz - comp1.M2zx" M场的旋度
+curlM2z "comp1.M2yx - comp1.M2xy" M场的旋度
+tM2x comp1.M2x-(comp1.w3.nx*comp1.M2x+comp1.w3.ny*comp1.M2y+comp1.w3.nz*comp1.M2z)*comp1.w3.nx M场的边界法向分量
+tM2y comp1.M2y-(comp1.w3.nx*comp1.M2x+comp1.w3.ny*comp1.M2y+comp1.w3.nz*comp1.M2z)*comp1.w3.ny M场的边界法向分量
+tM2z comp1.M2z-(comp1.w3.nx*comp1.M2x+comp1.w3.ny*comp1.M2y+comp1.w3.nz*comp1.M2z)*comp1.w3.nz M场的边界法向分量
