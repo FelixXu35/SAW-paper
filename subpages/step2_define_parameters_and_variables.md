@@ -2,7 +2,7 @@
 
 [⇦ back](../README.md)
 
-In COMSOL, parameters are constants, which don't change with results or other variables. Their values are directly assigned by the user. For example, the diameters of a piezoelectric device are parameters. In contrast, variables are defined as a function, which may be different with time, position and/or results.
+In COMSOL, parameters are user-defined constants that remain unchanged throughout the simulation, regardless of the values of other variables or results. These parameters are typically assigned by the user and may include characteristics such as the diameters of a piezoelectric device. In contrast, variables are defined as functions that can vary with time, position, and/or other results. Unlike parameters, variables can change during the simulation and are typically used to capture dynamic behavior or complex relationships between different phenomena.
 
 All definitions are accomplished within ***Global Definitions*** node.
 
